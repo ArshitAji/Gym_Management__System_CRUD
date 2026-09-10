@@ -11,8 +11,8 @@ with tab1:
     place=st.text_input("Current City")
     mobile=st.text_input("Contact Info")
     plan=st.text_input("Membership Plan")
-    fee=st.text_input("Membership fees")
-    joined_date=st.text_input("Joining Date")
+    fee=st.selectbox("Membership fees",["1 month","3 month","6 month"])
+    joined_date=st.date_input("Joining Date(yyyy/mm/dd")
     if st.button("Registration Complete"):
         gym_instance.post(name=name,place=place,mobile=mobile,plan=plan,fee=fee,joined_date=joined_date)
         st.success("Gym Membership Completed")
