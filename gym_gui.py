@@ -18,5 +18,10 @@ with tab1:
         st.success("Gym Membership Completed")
 with tab2:
     st.title("View Gym Memeber Details")
+    records=gym_instance.get()
+    if records:
+        st.table(records)
+    else:
+        st.warning("Record not found")
 
 

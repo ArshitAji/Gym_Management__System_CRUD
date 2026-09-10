@@ -21,8 +21,9 @@ class GymMemberManager(DbConnect):
             self.cursor = self.connect.cursor()
             query="Select * from member"
             self.cursor.execute(query)
-            records=self.cursor.fetchall()
-            print(records)
+            record=self.cursor.fetchall()
+            # print(record)
+            return record
         except Exception as e:
             print(e)
 
